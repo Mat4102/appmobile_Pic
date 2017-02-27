@@ -1,6 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="mobAppHDF.Views.LoginPage">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+             x:Class="mobAppHDF.Views.LoginPage"
+             BackgroundColor="Silver">
+ 
+  <StackLayout Spacing="20" Padding="80"
+                       VerticalOptions="Center" >
+    <Entry x:Name="Enom"
+           Placeholder="No dossier ou No carte"
+           HorizontalOptions="Center"
+           Style="{StaticResource inputStyle}"
+           TextColor="Black"/>
+
+    <Entry x:Name="LPrenom"
+           Placeholder="Mot de passe"
+           HorizontalOptions="Center"
+           IsPassword="True"
+           Style="{StaticResource inputStyle}"
+           TextColor="Black"
+          />
+
+    <Button x:Name="bttonC" Text="Connexion"
+       HorizontalOptions="Center"
+       Clicked="OnClicked_Co"
+       Style="{StaticResource buttonStyle}"
+       BackgroundColor="Gray" />
+    <Button x:Name="bttonI" Text="Retour"
+     HorizontalOptions="Center"
+     Clicked="OnClicked_R"
+     Style="{StaticResource buttonStyle}"
+     BackgroundColor="Gray"
+/>
+    <!--<controls:CheckBox DefaultText="Default text" HorizontalOptions="FillAndExpand" TextColor="Green" FontSize="25"   FontName="AmericanTypewriter"/>-->
+
+  </StackLayout>
 </ContentPage>

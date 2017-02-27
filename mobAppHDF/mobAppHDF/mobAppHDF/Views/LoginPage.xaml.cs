@@ -14,5 +14,23 @@ namespace mobAppHDF.Views
         {
             InitializeComponent();
         }
+        private async void OnClicked_Co(object sender, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new MainPage());
+
+            //  ServiceAuthentification.Authentification auth = new Authentification();
+            //  auth.loginIndividu = "354579";
+            //  auth.pwd = "a123456789";
+
+            // ServiceAuthentification.AuthentificationClient servClient = new AuthentificationClient();
+
+            //servClient.AuthentificationExtranetAsync("1060",auth);
+
+        }
+        private void OnClicked_R(object sender, EventArgs args)
+        {
+            this.Navigation.PushModalAsync(new MainPage());
+
+        }
     }
 }
